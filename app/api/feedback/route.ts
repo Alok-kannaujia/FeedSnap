@@ -10,13 +10,12 @@ export async function POST(req: NextRequest) {
 
     // console.log("validation", validation);
 
-    // if (!validation.success) {
-    //   // console.log(validation);
-    //   return NextResponse.json(
-    //     { success: false, error: "Invalid feedback data" },
-    //     { status: 400 }
-    //   );
-    // }
+    if (!feedback) {
+      return NextResponse.json(
+        { success: false, error: "no feedback data" },
+        { status: 400 }
+      );
+    }
 
     // Save feedback to database
     const submitFeedback = await prisma.feedback.create({
