@@ -1,14 +1,5 @@
 import prisma from "@/lib/db";
-import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
-
-const feedbackSchema = z.object({
-  name: z.string(),
-  email: z.string(),
-  feedback: z.string(),
-  rating: z.number().int().min(1).max(5),
-  projectid: z.string(),
-});
+import { NextResponse } from "next/server";
 
 export async function POST(req: any) {
   try {
