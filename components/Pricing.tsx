@@ -38,8 +38,8 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <section className="relative w-full overflow-hidden text-center flex flex-col justify-center py-12 border  text-black lg:px-2 lg:py-12">
-      <div className="relative flex flex-col items-center  justify-center gap-4">
+    <section className="relative w-full overflow-hidden text-center flex flex-col justify-center py-12 text-black lg:px-2 lg:py-12">
+      <div className="relative flex flex-col items-center justify-center gap-4">
         {/* <p className="text-red-100 w-fit  bg-red-600 px-2 py-1 text-xs mt-10 mx-auto rounded-full">
           Feature not implemented yet... 🥲
         </p> */}
@@ -47,11 +47,11 @@ const Pricing = () => {
           <div className="mb-2 inline-block mx-auto rounded-full bg-zinc-100 px-2 py-[0.20rem] text-xs font-medium uppercase text-zinc-500 dark:bg-zinc-200">
             Pricing
           </div>
-          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl text-gray-200">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl dark:text-gray-200">
             Fair pricing, unfair advantage.
           </p>
-          <p className="text-md max-w-xl  md:text-center text-gray-300">
-            Get started with FeedSnap today and take your webite to the next
+          <p className="text-md max-w-xl text-gray-700 md:text-center dark:text-gray-300">
+            Get started with Opinify today and take your webite to the next
             level.
           </p>
         </div>
@@ -60,7 +60,7 @@ const Pricing = () => {
         {pricingPlans.map((plan, index) => (
           <div
             key={index}
-            className="w-full rounded-xl border-[1px]  p-6 text-left border-gray-600"
+            className="w-full rounded-xl border-[1px] border-gray-300 p-6 text-left dark:border-gray-600"
           >
             <p className="mb-1 mt-0 text-sm font-medium uppercase text-zinc-200">
               {plan.name}
@@ -75,7 +75,7 @@ const Pricing = () => {
                   initial={{ y: -50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ type: "spring", stiffness: 100 }}
-                  className="my-0 text-3xl font-semibold text-gray-100"
+                  className="my-0 text-3xl font-semibold text-gray-900 dark:text-gray-100"
                 >
                   {plan.monthlyPrice === "Free" ? (
                     <>
