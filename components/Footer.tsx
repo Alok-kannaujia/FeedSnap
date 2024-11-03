@@ -47,7 +47,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex w-full z-[100000] flex-col bg-card-foreground  items-center px-10 justify-between gap-5 border-t border-gray-900/5 py-8 sm:flex-row dark:border-white/5">
+    <div className="flex w-full z-[100000] flex-col items-center px-10 justify-between gap-5 border-t border-gray-900/5 py-8 sm:flex-row dark:border-white/5">
       <p className="text-xs text-zinc-200 dark:text-gray-100">
         Copyright © {new Date().getFullYear()}{" "}
         <a
