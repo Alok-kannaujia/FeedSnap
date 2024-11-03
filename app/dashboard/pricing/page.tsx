@@ -16,9 +16,8 @@ const page = async () => {
   }
 
   return (
-    <div className="bg-card-foreground w-full min-h-[80vh]">
+    <div className="mx-auto">
       <PricingPage />
-      {/* <h1>hello</h1> */}
     </div>
   );
 };
