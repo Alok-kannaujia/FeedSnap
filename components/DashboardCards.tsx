@@ -16,7 +16,7 @@ const DashboardCards = ({
 }) => {
   return (
     <div className="border md:max-w-72 w-full px-4 flex flex-col transition-all border-white/20 hover:border-white/50 ease-in-out gap-y-2 py-3 rounded-md overflow-hidden mx-auto md:mx-0">
-      <div className="text-md block text-card">{name}</div>
+      <div className="text-md block">{name}</div>
       <hr />
       <Link
         href={title}
@@ -36,7 +36,7 @@ const DashboardCards = ({
         ))}
       </div> */}
       <div className="w-full flex gap-4 items-center mt-2">
-        <Button asChild variant={"default"}>
+        <Button asChild variant={"secondary"}>
           <Link href={`/dashboard/feedbacks/${id}`}>View</Link>
         </Button>
         <DeleteProjectButton id={id} />

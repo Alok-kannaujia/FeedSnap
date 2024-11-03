@@ -35,12 +35,10 @@ const Page = async () => {
   // console.log(data);
 
   return (
-    <div className="w-full min-h-[80vh] border bg-card-foreground">
+    <div className="w-full min-h-[80vh]">
       <div className="flex justify-between items-center py-3 px-5">
         {" "}
-        <h1 className="md:text-3xl text-xl text-card font-semibold">
-          Dashboard Page 📄
-        </h1>
+        <h1 className="md:text-3xl text-xl font-semibold">Dashboard Page 📄</h1>
         {data.length > 5 ? (
           <Button disabled variant={"outline"}>
             Limit Exceeded
