@@ -1,13 +1,19 @@
 import prisma from "@/lib/prisma";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: any) {
+export async function POST(req: NextRequest) {
   try {
     const feedback = await req.json();
 
+    // Validate feedback data using zod
+    // const validation = feedbackSchema.safeParse(feedback);
+
+    // console.log("validation", validation);
+
     if (!feedback) {
-      return new Response(
-        JSON.stringify({ success: false, error: "no feedback data" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
+      return NextResponse.json(
+        { success: false, error: "no feedback data" },
+        { status: 400 }
       );
     }
 
@@ -22,18 +28,20 @@ export async function POST(req: any) {
       },
     });
 
-    return new Response(
-      JSON.stringify({
+    // console.log("submitFeedback: ", submitFeedback);
+
+    return NextResponse.json(
+      {
         success: true,
         message: "Feedback received successfully",
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+      },
+      { status: 200 }
     );
   } catch (error) {
     console.log(error);
-    return new Response(
-      JSON.stringify({ success: false, error: "Failed to process feedback" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+    return NextResponse.json(
+      { success: false, error: "Failed to process feedback" },
+      { status: 500 }
     );
   }
 }
