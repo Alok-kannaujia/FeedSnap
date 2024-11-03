@@ -1,4 +1,4 @@
-import prisma from "@/lib/db";
+import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -20,11 +20,11 @@ export async function POST(req: NextRequest) {
     // Save feedback to database
     const submitFeedback = await prisma.feedback.create({
       data: {
-        name: feedback.name,
-        email: feedback.email,
-        feedback: feedback.feedback,
-        rating: feedback.rating,
-        projectId: feedback.projectId,
+        name: feedback?.name,
+        email: feedback?.email,
+        feedback: feedback?.feedback,
+        rating: feedback?.rating,
+        projectId: feedback?.projectId,
       },
     });
 
