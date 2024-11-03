@@ -10,7 +10,6 @@ import { GithubIcon } from "lucide-react";
 const AuthButtons = () => {
   const { data, status } = useSession();
   const [fetching, setFetching] = useState(true);
-  const [stars, setStars] = useState(0);
 
   useEffect(() => {
     if (status !== "loading") {
@@ -72,16 +71,13 @@ const AuthButtons = () => {
           <Button onClick={() => signIn("google")} variant="secondary">
             Sign in
           </Button>
-          <Link href="https://github.com/avayyyyyyy/opinify">
+          {/* <Link href="https://github.com/Alok-kannaujia/FeedSnap">
             <div className="flex items-center justify-center">
               <Button onClick={() => signIn("google")} variant="secondary">
                 gihtub
               </Button>
-              {/* <GithubIcon size={16} className="mr-1" />
-              Stars on gihtub{" "}
-              <span className="font-semibold ml-1">🌟 {stars}</span> */}
             </div>
-          </Link>
+          </Link> */}
         </div>
       )}
     </>
@@ -121,7 +117,7 @@ export const MobileSheetButtonsWithAuth = () => {
       >
         Sign out
       </Button>
-      <Link href="https://github.com/avayyyyyyy/opinify">
+      {/* <Link href="https://github.com/avayyyyyyy/opinify">
         <RainbowButton>
           <div className="flex items-center justify-center ">
             <GithubIcon size={16} className="mr-1" />
@@ -129,35 +125,35 @@ export const MobileSheetButtonsWithAuth = () => {
             <span className="font-semibold ml-1">🌟 {stars}</span>
           </div>
         </RainbowButton>
-      </Link>
+      </Link> */}
     </div>
   );
 };
 
 export const MobileSheetButtonsWithoutAuth = () => {
-  const [stars, setStars] = useState(0);
+  // const [stars, setStars] = useState(0);
 
-  useEffect(() => {
-    function fetchStars() {
-      fetch("https://api.github.com/repos/avayyyyyyy/opinify")
-        .then((res) => res.json())
-        .then((data) => {
-          setStars(data.stargazers_count);
-        });
-    }
-    fetchStars();
+  // useEffect(() => {
+  //   function fetchStars() {
+  //     fetch("https://api.github.com/repos/avayyyyyyy/opinify")
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setStars(data.stargazers_count);
+  //       });
+  //   }
+  //   fetchStars();
 
-    return () => {
-      setStars(0);
-    };
-  }, []);
+  //   return () => {
+  //     setStars(0);
+  //   };
+  // }, []);
 
   return (
     <div className="flex flex-col gap-2">
       <Button onClick={() => signIn("google")} variant="secondary">
         Sign in
       </Button>
-      <Link href="https://github.com/avayyyyyyy/opinify">
+      {/* <Link href="https://github.com/avayyyyyyy/opinify">
         <RainbowButton>
           <div className="flex items-center justify-center w-full">
             <GithubIcon size={16} className="mr-1" />
@@ -165,7 +161,7 @@ export const MobileSheetButtonsWithoutAuth = () => {
             <span className="font-semibold ml-1">🌟 {stars}</span>
           </div>
         </RainbowButton>
-      </Link>
+      </Link> */}
     </div>
   );
 };
