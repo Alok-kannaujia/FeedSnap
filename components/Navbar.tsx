@@ -102,7 +102,7 @@ const Navbar = async () => {
   const user = await auth();
 
   return (
-    <div className="flex h-full  bg-card-foreground mx-auto bg-clip-padding  z-[100] backdrop-blur-sm items-center md:px-16 px-6 justify-between py-6 border-b-2 border sticky top-0">
+    <div className="flex h-full bg-zinc-900 mx-auto bg-clip-padding backdrop-filter z-[100] backdrop-blur-sm bg-opacity-30 items-center md:px-16 px-6 justify-between py-6 border-b-2 border-zinc-800 sticky top-0">
       <div className="flex items-center gap-4">
         <MobileMenu user={user} />
         <Link
