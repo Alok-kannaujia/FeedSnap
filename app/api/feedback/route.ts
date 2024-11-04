@@ -1,5 +1,6 @@
 import prisma from "@/lib/db";
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 
 export async function POST(req: NextRequest) {
   try {
@@ -27,6 +28,7 @@ export async function POST(req: NextRequest) {
         projectId: feedback?.projectId,
       },
     });
+    revalidatePath("/dashboard/feedbacks/[id]");
 
     // console.log("submitFeedback: ", submitFeedback);
 
