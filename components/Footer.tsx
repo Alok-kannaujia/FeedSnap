@@ -51,14 +51,14 @@ const Footer = () => {
       <p className="text-xs text-zinc-200 dark:text-gray-100">
         Copyright © {new Date().getFullYear()}{" "}
         <a
-          href="https://shubhcodes.me"
+          href="https://feed-snap.vercel.app/"
           className=" text-zinc-500 underline hover:text-zinc-500 "
         >
           FeedSnap
         </a>
         <span className="mx-2">|</span>
         <a
-          href="https://opinify.in/privacy"
+          href="https://feed-snap.vercel.app//privacy"
           className=" text-zinc-500 underline hover:text-zinc-500 "
         >
           Privacy Policy

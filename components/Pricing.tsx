@@ -9,7 +9,7 @@ const pricingPlans = [
     description:
       "Get started with essential feedback tools for small businesses.",
     monthlyPrice: "Free",
-    link: "https://opinify.com/",
+    link: "https://feed-snap.vercel.app/",
     features: [
       "Limited to 5 projects",
       "Custom feedback forms",
@@ -24,7 +24,7 @@ const pricingPlans = [
     description:
       "Advanced features and dedicated support for growing enterprises.",
     monthlyPrice: 4999,
-    link: "https://opinify.com/",
+    link: "https://feed-snap.vercel.app/",
     features: [
       "Unlimited projects",
       "Everything in Basic plan",
@@ -51,7 +51,7 @@ const Pricing = () => {
             Fair pricing, unfair advantage.
           </p>
           <p className="text-md max-w-xl text-gray-700 md:text-center dark:text-gray-300">
-            Get started with Opinify today and take your webite to the next
+            Get started with FeedSnap today and take your webite to the next
             level.
           </p>
         </div>

@@ -6,6 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { funky } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Star, X, Copy, Check } from "lucide-react";
@@ -127,12 +134,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({ codeString }) => {
   };
 
   return (
-    <Button
-      onClick={copyToClipboard}
-      className="bg-black border"
-      variant="default"
-      size="sm"
-    >
+    <Button onClick={copyToClipboard} variant="outline" size="sm">
       {isCopied ? (
         <>
           <Check className="mr-2 h-4 w-4" /> Copied
@@ -261,7 +263,7 @@ const CustomWidget: React.FC<CustomWidgetProps> = ({
               <p className={`text-xs ${currentTheme.text} opacity-60`}>
                 Powered by{" "}
                 <a
-                  href="https://opinify.in/"
+                  href="https://feed-snap.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-bold hover:underline"
@@ -335,14 +337,12 @@ const EmbedCodeTabs: React.FC<EmbedCodeTabsProps> = ({
   return (
     <>
       <Separator className="my-2" />
-      <div className="mx-6 my-4 ">
-        <h1 className="md:text-3xl text-xl font-bold mb-1  text-white/70">
-          Preview Widget
-        </h1>
+      <div className="mx-6 my-4">
+        <h1 className="md:text-3xl text-xl font-bold mb-1">Preview Widget</h1>
         <p className="md:text-sm text-xs text-white/70 ">
           Preview your widget and get it matched with your website 🚀
         </p>
-        <div className="flex items-center text-white/70 space-x-4 mt-4">
+        <div className="flex items-center space-x-4 mt-4">
           {/* Theme selection */}
           {/* <Select
             value={selectedTheme}
@@ -350,7 +350,7 @@ const EmbedCodeTabs: React.FC<EmbedCodeTabsProps> = ({
               setSelectedTheme(value as keyof typeof themes)
             }
           >
-            <SelectTrigger className="w-[180px] border-border">
+            <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select a theme" />
             </SelectTrigger>
             <SelectContent>
@@ -368,12 +368,9 @@ const EmbedCodeTabs: React.FC<EmbedCodeTabsProps> = ({
             value={websiteName}
             onChange={(e) => setWebsiteName(e.target.value)}
             placeholder="Your Website Name"
-            className="border-border"
           />
 
-          <Button onClick={() => setIsWidgetOpen(true)} variant="secondary">
-            Open Widget
-          </Button>
+          <Button onClick={() => setIsWidgetOpen(true)}>Open Widget</Button>
         </div>
 
         {/* Widget preview with dynamic theme and website name */}
@@ -401,16 +398,16 @@ const EmbedCodeTabs: React.FC<EmbedCodeTabsProps> = ({
       </div>
 
       {/* Embed code display */}
-      <div className="w-[97%] p-5 border  rounded-md mx-4 my-3 text-sm">
+      <div className="w-[97%] p-5 border rounded-md mx-4 my-3 text-sm overflow-scroll">
         <Tabs
           defaultValue="html"
           onValueChange={(value) => setSelectedTab(value as "html" | "nextjs")}
         >
-          <TabsList className="bg-zinc-900">
+          <TabsList>
             <TabsTrigger value="html">HTML</TabsTrigger>
             <TabsTrigger value="nextjs">Next.js</TabsTrigger>
           </TabsList>
-          <TabsContent value="html">
+          <TabsContent value="html" className="h-auto overflow-scroll">
             <SyntaxHighlighter
               language="javascript"
               style={funky}
@@ -425,7 +422,7 @@ const EmbedCodeTabs: React.FC<EmbedCodeTabsProps> = ({
               {getCodeString(selectedTheme, websiteName)}
             </SyntaxHighlighter>
           </TabsContent>
-          <TabsContent value="nextjs">
+          <TabsContent value="nextjs" className="h-auto overflow-scroll">
             <SyntaxHighlighter
               language="jsx"
               style={funky}

@@ -115,33 +115,30 @@ export function FeedbackTable({
   };
 
   return (
-    <Card className="bg-card-foreground">
-      <CardHeader className="px-7  text-white">
+    <Card>
+      <CardHeader className="px-7">
         <CardTitle>Customer Feedback</CardTitle>
-        <CardDescription className="  text-white/50">
+        <CardDescription>
           View and manage customer feedback for your website 🚀.
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center gap-x-2 justify-between mb-4 text-white">
+        <div className="flex items-center gap-x-2 justify-between mb-4">
           <Input
             placeholder="Search feedback..."
-            className="bg-black border-border text-white focus:border-white"
+            className="bg-white dark:bg-black"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
           <div className="flex gap-x-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button className="bg-black border" variant="default">
+                <Button variant="outline" className="shrink-0">
                   <ArrowUpDownIcon className="w-4 h-4 mr-2" />
                   Sort by
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent
-                className="w-[200px] bg-black text-white "
-                align="end"
-              >
+              <DropdownMenuContent className="w-[200px]" align="end">
                 <DropdownMenuRadioGroup
                   value={sort.key}
                   onValueChange={(key) => handleSort(key as keyof FeedbackItem)}
@@ -159,16 +156,15 @@ export function FeedbackTable({
               </DropdownMenuContent>
             </DropdownMenu>
             <Button
-              className="bg-black border"
-              variant="default"
+              variant="outline"
               onClick={() => downloadCSV(filteredFeedback)}
             >
               Export CSV <DownloadIcon className="w-4 h-4" />
             </Button>
           </div>
         </div>
-        <Table className="text-white">
-          <TableHeader className="text-white hover:bg-gray-50/50">
+        <Table>
+          <TableHeader>
             <TableRow>
               <TableHead
                 className="cursor-pointer"
@@ -210,7 +206,7 @@ export function FeedbackTable({
           </TableHeader>
           <TableBody>
             {filteredFeedback.map((item) => (
-              <TableRow key={item.id} className="text-white hover:bg-zinc-900">
+              <TableRow key={item.id}>
                 <TableCell>{item.name}</TableCell>
                 <TableCell>
                   {item.email.length > 10
@@ -225,15 +221,12 @@ export function FeedbackTable({
                 <TableCell>
                   <div className="flex items-center gap-0.5">
                     {Array.from({ length: item.rating }).map((_, index) => (
-                      <StarIcon
-                        key={index}
-                        className="w-5 h-5 fill-primary fill-white"
-                      />
+                      <StarIcon key={index} className="w-5 h-5 fill-primary" />
                     ))}
                     {Array.from({ length: 5 - item.rating }).map((_, index) => (
                       <StarIcon
                         key={index}
-                        className="w-5 h-5 stroke-muted-foreground"
+                        className="w-5 h-5 fill-muted stroke-muted-foreground"
                       />
                     ))}
                   </div>

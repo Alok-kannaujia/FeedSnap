@@ -37,16 +37,16 @@ export const metadata: Metadata = {
     title:
       "FeedSnap: Real-Time Feedback Platform | Enhance Customer Engagement",
     description:
-      "Enhance customer engagement with Opinify's real-time feedback platform. Collect, manage, and analyze user insights to drive data-driven improvements.",
-    url: "https://www.opinify.in",
+      "Enhance customer engagement with FeedSnap's real-time feedback platform. Collect, manage, and analyze user insights to drive data-driven improvements.",
+    url: "https://feed-snap.vercel.app/",
     siteName: "FeedSnap",
-    images: [
-      {
-        url: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://utfs.io/f/9e53247a-090e-4b56-ae1e-03c9e4bff653-md47.png",
+    //     width: 1200,
+    //     height: 630,
+    //   },
+    // ],
     locale: "en_US",
     type: "website",
   },
@@ -55,10 +55,10 @@ export const metadata: Metadata = {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "FeedSnap",
-      url: "https://www.opinify.in",
+      url: "https://feed-snap.vercel.app/",
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://www.opinify.in/search?q={search_term_string}",
+        target: "https://feed-snap.vercel.app/search?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
     }),

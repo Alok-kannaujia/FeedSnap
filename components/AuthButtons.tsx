@@ -4,8 +4,6 @@ import { Button } from "./ui/button";
 import { signIn, signOut, useSession } from "next-auth/react";
 import CreateProject from "./CreateProject";
 import Link from "next/link";
-import { RainbowButton } from "./ui/rainbow-button";
-import { GithubIcon } from "lucide-react";
 
 const AuthButtons = () => {
   const { data, status } = useSession();
@@ -48,11 +46,7 @@ const AuthButtons = () => {
     <>
       {data?.user?.email ? (
         <div className="flex gap-3 md:items-center md:flex-row flex-col text-start">
-          <Button
-            className="w-full hidden md:block bg-black border"
-            asChild
-            variant="default"
-          >
+          <Button className="w-full hidden md:block" asChild variant="outline">
             <Link href={"/dashboard"}>Dashboard</Link>
           </Button>
           <div className="my-auto mt-2 md:mt-0">
@@ -89,21 +83,21 @@ export default AuthButtons;
 export const MobileSheetButtonsWithAuth = () => {
   const [stars, setStars] = useState(0);
 
-  useEffect(() => {
-    function fetchStars() {
-      fetch("https://api.github.com/repos/avayyyyyyy/opinify")
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setStars(data.stargazers_count);
-        });
-    }
-    fetchStars();
+  // useEffect(() => {
+  //   function fetchStars() {
+  //     fetch("https://api.github.com/repos/avayyyyyyy/opinify")
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log(data);
+  //         setStars(data.stargazers_count);
+  //       });
+  //   }
+  //   fetchStars();
 
-    return () => {
-      setStars(0);
-    };
-  }, []);
+  //   return () => {
+  //     setStars(0);
+  //   };
+  // }, []);
 
   return (
     <div className="flex gap-3 md:items-center md:flex-row flex-col text-start">

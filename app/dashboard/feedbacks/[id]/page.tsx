@@ -61,7 +61,7 @@ const Page = async ({ params }: Params) => {
     // console.log("id: ", params.id);
 
     return (
-      <div className="w-screen h-full border overflow-scroll bg-card-foreground">
+      <div className="w-screen h-full overflow-y-scroll">
         {/* <div className="p-4 border rounded-lg m-2">
           <div className="text-2xl font-bold mb-2">
             What our expert thinks about you website 🤖
@@ -72,7 +72,7 @@ const Page = async ({ params }: Params) => {
             </Markdown>
           </div>
         </div> */}
-        <div className="flex text-sm gap-x-2 m-2 border border-red-800 text-red-400  bg-card-foreground rounded-lg p-4">
+        <div className="flex text-sm gap-x-2 m-2 border border-red-800 text-red-400 rounded-lg p-4">
           <div
             className="font-bold
            shrink-0"
