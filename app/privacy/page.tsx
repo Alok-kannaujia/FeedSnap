@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
                 feel free to{" "}
                 <Link
                   className="hover:underline text-white"
-                  href={"mailto:jabhi465@gmail.com"}
+                  href={"mailto:alokkanaujiyagkp@gmail.com"}
                 >
                   contact us
                 </Link>

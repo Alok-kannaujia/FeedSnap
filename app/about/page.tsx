@@ -27,7 +27,7 @@ const Article1 = () => {
 
             <div className="mt-10">
               <p className="text-base font-normal leading-7 text-gray-300">
-                Welcome to FeedSnap.in, your go-to solution for effortless and
+                Welcome to FeedSnap, your go-to solution for effortless and
                 efficient feedback collection. In today’s fast-paced digital
                 world, understanding user experience and gathering actionable
                 insights is crucial for success. FeedSnap.in is here to simplify
@@ -81,7 +81,7 @@ const Article1 = () => {
                 Our Mission
               </h2>
               <p className="mt-6 text-base font-normal leading-7 text-gray-300">
-                At FeedSnap.in, we are dedicated to helping businesses and
+                At FeedSnap, we are dedicated to helping businesses and
                 developers harness the power of user feedback. Our mission is to
                 provide a tool that not only simplifies the feedback collection
                 process but also delivers meaningful insights that can drive
@@ -91,7 +91,7 @@ const Article1 = () => {
               </p>
               <blockquote className="pl-5 mt-8 border-l-2 border-white">
                 <p className="text-lg italic font-medium text-white">
-                  Join the FeedSnap.in community today and discover how our
+                  Join the FeedSnap community today and discover how our
                   platform can help you turn user feedback into actionable
                   strategies for success. Experience a new level of insight and
                   efficiency with FeedSnap.in.
