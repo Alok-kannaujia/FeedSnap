@@ -49,11 +49,9 @@ export function FeedbackView({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="bg-black border" variant="default">
-          View Review
-        </Button>
+        <Button variant="outline">View Review</Button>
       </DialogTrigger>
-      <DialogContent className="md:w-full w-[95vw] p-6 md:p-8  bg-card-foreground text-white rounded-lg shadow-lg">
+      <DialogContent className="md:w-full w-[95vw] p-6 md:p-8 bg-background rounded-lg shadow-lg">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">
             <Avatar className="w-10 h-10">
@@ -63,8 +61,8 @@ export function FeedbackView({
               />
               <AvatarFallback>{name.charAt(0)}</AvatarFallback>
             </Avatar>
-            <div className="grid gap-0.5 text-white">
-              <h3 className="font-semibold text-white ">{name}</h3>
+            <div className="grid gap-0.5">
+              <h3 className="font-semibold">{name}</h3>
               <p className="text-sm text-muted-foreground">{email}</p>
             </div>
           </div>
