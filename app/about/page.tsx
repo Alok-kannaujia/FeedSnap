@@ -18,7 +18,7 @@ const Article1 = () => {
             </p>
 
             <h1 className="text-3xl font-bold text-white mt-7 sm:text-4xl xl:text-5xl">
-              What is FeedSnap.in?
+              What is FeedSnap
             </h1>
             <p className="text-sm font-normal text-gray-400 mt-7">
               {new Date().toLocaleString("default", { month: "long" })},{" "}
@@ -30,7 +30,7 @@ const Article1 = () => {
                 Welcome to FeedSnap, your go-to solution for effortless and
                 efficient feedback collection. In today’s fast-paced digital
                 world, understanding user experience and gathering actionable
-                insights is crucial for success. FeedSnap.in is here to simplify
+                insights is crucial for success. FeedSnap is here to simplify
                 that process, offering a powerful platform to collect, manage,
                 and analyze feedback directly from your website.
               </p>
@@ -94,7 +94,7 @@ const Article1 = () => {
                   Join the FeedSnap community today and discover how our
                   platform can help you turn user feedback into actionable
                   strategies for success. Experience a new level of insight and
-                  efficiency with FeedSnap.in.
+                  efficiency with FeedSnap.
                 </p>
               </blockquote>
               <div className="relative mt-16">
@@ -126,7 +126,7 @@ const Article1 = () => {
                 We believe in the power of communication and are always here to
                 help. If you have any questions, suggestions, or need further
                 assistance, don’t hesitate to reach out. Whether you’re curious
-                about how FeedSnap.in works, need help integrating it into your
+                about how FeedSnap works, need help integrating it into your
                 website, or simply want to share your thoughts, we’re all ears.
                 Your feedback is as important to us as it is to you.
               </p>
@@ -135,13 +135,12 @@ const Article1 = () => {
                   Let’s{" "}
                   <Link
                     className="hover:underline text-white"
-                    href={"https://x.com/shubhcodes"}
+                    href={"https://feed-snap.vercel.app/"}
                     target="_"
                   >
                     connect
                   </Link>{" "}
-                  and make the most out of your feedback journey with
-                  FeedSnap.in.
+                  and make the most out of your feedback journey with FeedSnap.
                 </p>
               </blockquote>
             </div>

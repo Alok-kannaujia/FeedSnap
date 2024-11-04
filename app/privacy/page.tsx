@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
 
             <div className="mt-10">
               <p className="text-base font-normal leading-7 text-gray-300">
-                At FeedSnap.in, we prioritize the privacy and security of our
+                At FeedSnap, we prioritize the privacy and security of our
                 user&apos;s data. This Privacy Policy outlines how we collect,
                 use, and safeguard your personal information when you use our
                 platform.
@@ -37,8 +37,8 @@ const PrivacyPolicy = () => {
                 Information We Collect
               </h2>
               <p className="mt-6 text-base font-normal leading-7 text-gray-300">
-                When you interact with FeedSnap.in, we may collect various types
-                of information:
+                When you interact with FeedSnap, we may collect various types of
+                information:
               </p>
               <ul className="pl-5 mt-6 space-y-1 text-base font-normal leading-7 text-gray-300 list-disc">
                 <li>
